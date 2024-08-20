@@ -450,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4710386744780114714, guid: 507777845a9393a4e83f8c362e915549, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.65999234
+      value: -0.7302042
       objectReference: {fileID: 0}
     - target: {fileID: 4710386744780114714, guid: 507777845a9393a4e83f8c362e915549, type: 3}
       propertyPath: m_LocalRotation.w
@@ -814,8 +814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e5685bd26ce05499a4e5ae00469296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 50
-  steering: 5
+  acceleration: 20
+  steering: 2
   maxSpeed: 20
 --- !u!54 &1964890112
 Rigidbody:
@@ -924,7 +924,7 @@ Transform:
   m_GameObject: {fileID: 1964890110}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.22, z: 2.83}
+  m_LocalPosition: {x: 0, y: 2.22, z: 3.03}
   m_LocalScale: {x: 1.8373722, y: 0.9254852, z: 2.848518}
   m_ConstrainProportionsScale: 0
   m_Children:
