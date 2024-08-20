@@ -64,6 +64,7 @@
     <Compile Include="Assets\P_Scripts\Busmove.cs" />
     <Compile Include="Assets\P_Scripts\BusMove3.cs" />
     <Compile Include="Assets\P_Scripts\Human_Trigger.cs" />
+    <Compile Include="Assets\P_Scripts\BusStop_Trigger.cs" />
     <Compile Include="Assets\09_Script\NewBehaviourScript.cs" />
   </ItemGroup>
   <ItemGroup>
