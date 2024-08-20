@@ -60,7 +60,14 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.38f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\P_Scripts\BusMove2.cs" />
+    <Compile Include="Assets\P_Scripts\Busmove.cs" />
+    <Compile Include="Assets\P_Scripts\BusMove3.cs" />
+    <Compile Include="Assets\P_Scripts\Human_Trigger.cs" />
     <Compile Include="Assets\09_Script\NewBehaviourScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Cobra Games Studio\Low Poly Bus Pack\Upgrade to URP.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
