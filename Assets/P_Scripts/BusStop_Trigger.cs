@@ -20,11 +20,13 @@ public class BusStop_Trigger : MonoBehaviour // ºÎµúÈ÷¸é Busmove3 ÀÇ Busstop ÇÔ¼
 
     private void OnTriggerEnter(Collider other)
     {
+        
         BusMove3 bus = other.GetComponent<BusMove3>();
 
         if(bus != null)
         {
-            bus.BusStop();
+            bus.isBusRun = false;
+            
         }
     }
 

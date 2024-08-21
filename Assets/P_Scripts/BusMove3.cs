@@ -14,14 +14,18 @@ using UnityEngine;
         public float currentSpeed; // 현재속도
 
         public float deceleration =155f; // 감속 속도
+        public bool isBusRun;
+ 
 
-       
+
         private Rigidbody rb;
         void Start()
         {
             rb = GetComponent<Rigidbody>();
-            rb.centerOfMass = new Vector3(0, -0.5f, 0); // 무게 중심을 조정하여 차량의 안정성 향상
+           // rb.centerOfMass = new Vector3(0, -0.5f, 0); // 무게 중심을 조정하여 차량의 안정성 향상
             currentSpeed = 0;
+
+        isBusRun = true; // 시작할때 버스런을 true로
         }
 
         void Update()
@@ -51,11 +55,20 @@ using UnityEngine;
             // 입력값이 없을때 BusStart 함수 실행
             else if(rb.velocity.magnitude < maxSpeed)
             {
+                if(isBusRun == true)
+            {
                 BusStart();
+            }
+
+                                  
+                          
           
             }
 
-
+        if (isBusRun == false)
+        {
+            BusStop();
+        }
 
             // 회전
             float steerAngle = steerInput * steering;
@@ -64,11 +77,6 @@ using UnityEngine;
             rb.MoveRotation(rb.rotation * turnRotation);
 
 
-
-            //// 만약, AI가 사람을 인식했다면 여기에 코드 입력
-            //{
-            //    BusStop();
-            // }
 
 
         }
@@ -91,24 +99,35 @@ using UnityEngine;
         // 버스가 감속하다가 정지
         public void BusStop()
         {
-            // 속도가 누적 감소
-           currentSpeed -= deceleration * Time.fixedDeltaTime;
-           // 현재속도의 최대속도는 0으로 제한(음수방지)
-           currentSpeed = Mathf.Max(currentSpeed, 0);
+    
 
-           float stopSpeed = currentSpeed - -rb.velocity.magnitude;
-           Vector3 idleForce = transform.forward * stopSpeed;
+        Vector3 decelerationForce = -rb.velocity.normalized * deceleration;
 
-           rb.AddForce(idleForce, ForceMode.Acceleration);
+        // 실제 힘을 적용하여 속도를 감소시킵니다.
+        rb.AddForce(decelerationForce, ForceMode.Acceleration);
 
-           //if(currentSpeed < 5f)
-           //{
-           //    StartCoroutine(BusStartAgain(5f)); \버스 정지조건을 하고 고쳐야함 개같은 코루틴
-           //}
-         }
+        // 속도가 0 이하로 떨어지지 않도록 제한합니다.
+        if (rb.velocity.magnitude < 0.1f) // 거의 정지 상태로 간주
+        {
+            rb.velocity = Vector3.zero;
+            currentSpeed = 0;
+        }
 
 
 
+        //if(currentSpeed < 5f)
+        //{
+        //    StartCoroutine(BusStartAgain(5f)); \버스 정지조건을 하고 고쳐야함 개같은 코루틴
+        //}
+    }
+
+
+
+
+    //// 만약, AI가 사람을 인식했다면 여기에 코드 입력
+    //{
+    //    BusStop();
+    // }
 
 
 
