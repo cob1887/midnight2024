@@ -74,19 +74,38 @@ using UnityEngine;
         }
 
 
-     
+        // 버스가 출발
         public void BusStart()
         {
-       
-                currentSpeed += idleAcceleration * Time.fixedDeltaTime;
-                currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
+             // 현재속도에 정지가속 * 시간을 누적
+             currentSpeed += idleAcceleration * Time.fixedDeltaTime;
+             // 현재속도는 현재속도 ~ 정해진 max속도로 제한
+             currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
 
-                Vector3 idleForce = transform.forward * (currentSpeed - rb.velocity.magnitude);
-                rb.AddForce(idleForce, ForceMode.Acceleration); // 질량에 따라 자연스럽게 속도가 증가
+             Vector3 idleForce = transform.forward * (currentSpeed - rb.velocity.magnitude);
+             rb.AddForce(idleForce, ForceMode.Acceleration); // 질량에 따라 자연스럽게 속도가 증가
         }
 
 
 
+        // 버스가 감속하다가 정지
+        public void BusStop()
+        {
+            // 속도가 누적 감소
+           currentSpeed -= deceleration * Time.fixedDeltaTime;
+           // 현재속도의 최대속도는 0으로 제한(음수방지)
+           currentSpeed = Mathf.Max(currentSpeed, 0);
+
+           float stopSpeed = currentSpeed - -rb.velocity.magnitude;
+           Vector3 idleForce = transform.forward * stopSpeed;
+
+           rb.AddForce(idleForce, ForceMode.Acceleration);
+
+           //if(currentSpeed < 5f)
+           //{
+           //    StartCoroutine(BusStartAgain(5f)); \버스 정지조건을 하고 고쳐야함 개같은 코루틴
+           //}
+         }
 
 
 
@@ -94,40 +113,23 @@ using UnityEngine;
 
 
 
-    // 버스가 감속하다가 정지
-    public void BusStop()
-    {
-
-        // 속도가 점점 감소
-        currentSpeed -= deceleration * Time.fixedDeltaTime;
-        currentSpeed = Mathf.Max(currentSpeed, 0);
-
-        float stopSpeed = currentSpeed - -rb.velocity.magnitude;
-        Vector3 idleForce = transform.forward * stopSpeed;
-
-        rb.AddForce(idleForce, ForceMode.Acceleration);
-
-        //if(currentSpeed < 5f)
-        //{
-        //    StartCoroutine(BusStartAgain(5f)); \버스 정지조건을 하고 고쳐야함 개같은 코루틴
-        //}
-    }
-
-      
-
-        //private IEnumerator BusStartAgain(float time)
-        //{
-        //    yield return new WaitForSeconds(time);
-
-        //    BusStart();
-
-        //   isBusStop = false;
-        //}
-        
 
 
-   
 
 
-    }
+    //private IEnumerator BusStartAgain(float time)
+    //{
+    //    yield return new WaitForSeconds(time);
+
+    //    BusStart();
+
+    //   isBusStop = false;
+    //}
+
+
+
+
+
+
+}
 

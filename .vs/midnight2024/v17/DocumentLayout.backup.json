@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{47CC5810-4B1B-4B6F-5119-D7196CCE5A6B}|Assembly-CSharp.csproj|solutionrelative:assets\\p_scripts\\busmove3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47CC5810-4B1B-4B6F-5119-D7196CCE5A6B}|Assembly-CSharp.csproj|c:\\users\\admin\\documents\\github\\midnight2024\\assets\\p_scripts\\busmove2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47CC5810-4B1B-4B6F-5119-D7196CCE5A6B}|Assembly-CSharp.csproj|solutionrelative:assets\\p_scripts\\busmove2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{47CC5810-4B1B-4B6F-5119-D7196CCE5A6B}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Documents\\GitHub\\midnight2024\\assets\\p_scripts\\human_trigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47CC5810-4B1B-4B6F-5119-D7196CCE5A6B}|Assembly-CSharp.csproj|solutionrelative:assets\\p_scripts\\human_trigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47CC5810-4B1B-4B6F-5119-D7196CCE5A6B}|Assembly-CSharp.csproj|c:\\users\\admin\\documents\\github\\midnight2024\\assets\\p_scripts\\busstop_trigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47CC5810-4B1B-4B6F-5119-D7196CCE5A6B}|Assembly-CSharp.csproj|solutionrelative:assets\\p_scripts\\busstop_trigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47CC5810-4B1B-4B6F-5119-D7196CCE5A6B}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Documents\\GitHub\\midnight2024\\assets\\p_scripts\\busmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,17 +26,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BusStop_Trigger.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\midnight2024\\Assets\\P_Scripts\\BusStop_Trigger.cs",
+              "RelativeDocumentMoniker": "Assets\\P_Scripts\\BusStop_Trigger.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\midnight2024\\Assets\\P_Scripts\\BusStop_Trigger.cs",
+              "RelativeToolTip": "Assets\\P_Scripts\\BusStop_Trigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T16:17:58.811Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "BusMove3.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\midnight2024\\Assets\\P_Scripts\\BusMove3.cs",
               "RelativeDocumentMoniker": "Assets\\P_Scripts\\BusMove3.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\midnight2024\\Assets\\P_Scripts\\BusMove3.cs*",
-              "RelativeToolTip": "Assets\\P_Scripts\\BusMove3.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\midnight2024\\Assets\\P_Scripts\\BusMove3.cs",
+              "RelativeToolTip": "Assets\\P_Scripts\\BusMove3.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAYwH0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-20T13:49:51.145Z",
               "EditorCaption": ""
@@ -44,27 +57,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BusMove2.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\midnight2024\\Assets\\P_Scripts\\BusMove2.cs",
-              "RelativeDocumentMoniker": "Assets\\P_Scripts\\BusMove2.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\midnight2024\\Assets\\P_Scripts\\BusMove2.cs",
-              "RelativeToolTip": "Assets\\P_Scripts\\BusMove2.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwv0EAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T12:45:43.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Human_Trigger.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\midnight2024\\Assets\\P_Scripts\\Human_Trigger.cs",
               "RelativeDocumentMoniker": "Assets\\P_Scripts\\Human_Trigger.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\midnight2024\\Assets\\P_Scripts\\Human_Trigger.cs",
               "RelativeToolTip": "Assets\\P_Scripts\\Human_Trigger.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBsAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T11:45:48.937Z"
+              "WhenOpened": "2024-08-20T11:45:48.937Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
